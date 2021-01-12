@@ -9,7 +9,7 @@
 <!--    <Ex1/>-->
 <!--    <Ex2/>-->
 <!--    <Ex3/>-->
-<!--    <Bai1buoi2/>-->
+    <Bai1buoi2/>
     <Bai2buoi2/>
   </div>
 </template>
@@ -23,7 +23,7 @@
 // import Ex1 from "./components/Ex1";
 // import Ex2 from "./components/Ex2";
 // import Ex3 from "./components/Ex3";
-// import Bai1buoi2 from "./components/Bai1buoi2";
+import Bai1buoi2 from "./components/Bai1buoi2";
 import Bai2buoi2 from "./components/Bai2buoi2";
 
 export default {
@@ -37,7 +37,7 @@ export default {
     // Ex1
     // Ex2,
     // Ex3
-    // Bai1buoi2,
+    Bai1buoi2,
     Bai2buoi2
   }
 }
