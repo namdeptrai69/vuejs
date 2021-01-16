@@ -25,6 +25,13 @@
         </td>
       </tr>
     </table>
+    <div class="page">
+      <p>Hiện thị {{revenrA}} - {{revenrB}} trên tổng 0 (0 trang)</p>
+      <div>
+        <img src="https://cdn4.iconfinder.com/data/icons/basic-user-interface-elements/700/left-arrow-back-256.png" alt="">
+        <img src="https://cdn4.iconfinder.com/data/icons/basic-user-interface-elements/700/right-forward-arrow-256.png" alt="">
+      </div>
+    </div>
   </div>
 </template>
 
@@ -33,7 +40,6 @@ export default {
   props: ['products'],
   data (){
     return {
-
     }
   },
   methods: {
@@ -43,50 +49,94 @@ export default {
     destr (index) {
       this.products.splice(index,1);
     }
+  },
+  computed: {
+    revenrA: function () {
+      if (this.products.length === 0){
+        return 0;
+      }
+      return 1;
+    },
+    revenrB: function () {
+      if (this.products.length === 0){
+        return 0;
+      }
+      return this.products.length;
+    }
   }
 }
 
 </script>
 
 <style lang="scss" scoped>
-.table-container table {
-  border: 1px solid #CCC;
-  border-collapse: collapse;
-  text-align: center;
-  margin: 10px;
-
-  .ten-bang td{
-    background-color: #f2f6fe;
+.table-container {
+  table {
     border: 1px solid #CCC;
-    padding: 15px;
-    font-weight: bold;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 10px;
+
+    .ten-bang td {
+      background-color: #f2f6fe;
+      border: 1px solid #CCC;
+      padding: 15px;
+      font-weight: bold;
+    }
+
+    td {
+      border-left: 1px solid #CCC;
+      padding: 15px;
+
+      div {
+        text-align: left;
+        display: flex;
+        align-items: center;
+
+        span {
+          color: #0080dd;
+        }
+
+        img {
+          width: 48px;
+          margin-right: 15px;
+        }
+      }
+
+      button {
+        padding: 10px;
+        border: unset;
+        cursor: pointer;
+        color: white;
+        border-radius: 5px;
+        margin: 5px;
+      }
+
+      .edit {
+        background-color: chocolate;
+      }
+    }
   }
-  td {
-    border-left: 1px solid #CCC;
-    padding: 15px;
-    div {
+  .page{
+    margin: 11px;
+    text-align: right;
+    p {
       text-align: left;
-      display: flex;
-      align-items:center;
-      span {
-        color: #0080dd;
-      }
+      width: 50%;
+      margin: 5px 5px 5px 0;
+      float: left;
+    }
+    div {
+      display: inline-block;
       img {
-        width: 48px;
-        margin-right: 15px;
+        width: 14px;
+        padding: 5px;
+        background-color: #f2f6fe;
+        border: 1px solid #CCC;
+        margin-left: 5px;
+        cursor: pointer;
       }
-    }
-    button {
-      padding: 10px;
-      border: unset;
-      cursor: pointer;
-      color: white;
-      border-radius: 5px;
-      margin: 5px;
-    }
-    .edit {
-      background-color: chocolate;
     }
   }
 }
+
 </style>
