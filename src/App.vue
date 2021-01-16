@@ -9,8 +9,12 @@
 <!--    <Ex1/>-->
 <!--    <Ex2/>-->
 <!--    <Ex3/>-->
-    <Bai1buoi2/>
-    <Bai2buoi2/>
+<!--     <Bai1buoi2/>-->
+<!--     <Bai2buoi2/>-->
+<!--    <Buoi3/>-->
+<!--    <ExBuoi3/>-->
+<!--    <Bai1Todo/>-->
+    <Bai2Exercise/>
   </div>
 </template>
 
@@ -23,8 +27,12 @@
 // import Ex1 from "./components/Ex1";
 // import Ex2 from "./components/Ex2";
 // import Ex3 from "./components/Ex3";
-import Bai1buoi2 from "./components/Bai1buoi2";
-import Bai2buoi2 from "./components/Bai2buoi2";
+// import Bai1buoi2 from "./components/Bai1buoi2";
+// import Bai2buoi2 from "./components/Bai2buoi2";
+// import Buoi3 from "./components/Buoi3/login";
+// import ExBuoi3 from "./components/ExBuoi3/home";
+// import Bai1Todo from "./components/BaiTapBuoi3/Bai1/Todo";
+import Bai2Exercise from "./components/BaiTapBuoi3/Bai2/Exercise";
 
 export default {
   name: 'App',
@@ -36,9 +44,13 @@ export default {
     // Ex,
     // Ex1
     // Ex2,
-    // Ex3
-    Bai1buoi2,
-    Bai2buoi2
+    // Ex3,
+    // Bai1buoi2,
+    // Bai2buoi2,
+    // Buoi3,
+    // ExBuoi3,
+    // Bai1Todo,
+    Bai2Exercise
   }
 }
 </script>
