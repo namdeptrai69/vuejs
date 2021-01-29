@@ -31,13 +31,13 @@
       <el-link href="#" target="_blank">Giáo dục</el-link>
       <el-link href="#" target="_blank">Văn hóa</el-link>
       <el-link href="#" target="_blank" >Công nghệ</el-link>
-      <el-link href="#" target="_blank">Giải trí</el-link>
+      <router-link to="/giaitri">Giải trí</router-link>
     </el-col>
     <el-col :span="6">
       <slot name="left"></slot>
     </el-col>
     <el-col :span="12">
-      <slot name="content"></slot>
+      <router-view/>
     </el-col>
     <el-col :span="6">
       <slot name="right"></slot>
